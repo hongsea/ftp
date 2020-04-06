@@ -27,7 +27,7 @@ sudo systemctl start docker
 
     ```
     sudo docker run -d -v <Directory>:/home/vsftpd \
-    -p 20:20 -p 23:21 -p 47400-47470:47400-47470 \
+    -p 21:21 \
     -e FTP_USER=<username> \
     -e FTP_PASS=<password> \
     -e PASV_ADDRESS=<IP ADDRESS> \
