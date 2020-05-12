@@ -12,13 +12,12 @@ COPY vsftpd.conf /etc/vsftpd/
 COPY vsftpd_virtual /etc/pam.d/
 COPY run-vsftpd.sh /usr/sbin/
 
-
 RUN chmod +x /usr/sbin/run-vsftpd.sh && \
     mkdir -p /var/run/vsftpd/empty
 
 VOLUME /home/vsftpd
 VOLUME /var/log/vsftpd
 
-EXPOSE 20 21 23
+EXPOSE 21
 
 CMD ["/usr/sbin/run-vsftpd.sh"] 
